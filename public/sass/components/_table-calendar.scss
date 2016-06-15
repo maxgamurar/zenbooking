@@ -1,0 +1,102 @@
+/* table with room booking month view */
+.page-calendar{
+    position:relative;
+}
+.table-calendar-wrap{
+    width: auto;
+    overflow-x:scroll;  
+    margin-left:$calendar-table-left-col-width + 20px;
+    overflow-y:visible;
+    padding-bottom:1px;
+
+    .zen-calendar-table{
+        tr{
+            &.calendar-nav-row{
+                height:50px;
+            }
+            &.day-names, &.day-numbers{
+                td:not(.first-col){
+                    text-align: center;
+                }
+            }
+            &.day-names{
+                .day-num-6, .day-num-0{
+                    background-color: salmon;
+                }
+            }
+            td{
+                padding:10px;
+                &.first-col {                
+                    position:absolute;
+                    width:$calendar-table-left-col-width;
+                    left:0;
+                    top:auto;
+
+                    background-color: beige;
+                    &.top-left{
+                        vertical-align: middle;
+                        font-weight: bold;
+                    }
+                }
+                &.room-name-row{
+                    background-color: darken(beige, 20);
+                    font-weight: bold;
+                }
+                &.calendar-nav{
+                    text-align: center;
+                    font-weight: bold;
+                    a{
+                        padding:0 10px;
+                    }
+                    position:absolute;
+                    width:100%;
+                    margin-left:-$calendar-table-left-col-width;
+                }
+
+            }
+        }
+        .room-book-act{
+            cursor: pointer;
+            border-bottom:1px dotted #aaa;
+        }
+    }
+
+    #zen-calendar-form{
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.4);
+        z-index: 99999;
+        display:none;
+
+        div{
+            width: 270px;
+            position: relative;
+            margin: 10% auto;
+            padding: 15px;
+            border-radius: 10px;
+            background: #fff;
+        }
+        
+       
+        button{
+            border-radius: 4px;
+            background-color: #fefefe;
+            width:30px;
+            height:30px;
+            border:1px solid #ddd;
+            font-size:12px;
+            margin-left:10px;
+            
+            &.btn-submit{
+                color:blue;
+            }
+            &.btn-close{
+                color:red;
+            }
+        }
+    }
+}

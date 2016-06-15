@@ -1,0 +1,14 @@
+{
+    "name": "zen_booking",
+    "version": "0.0.1",
+    "description": "ZEN Booking Calendar Task",
+    "devDependencies": {
+        "gulp": "^3.9.0",
+        "gulp-autoprefixer": "~1.0.1",
+        "gulp-sass": "^2.0.4",
+        "gulp-clean-css": "^2.0.8"
+    },
+    "scripts": {
+        "test": "gulp test"
+    }
+}

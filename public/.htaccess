@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+<IfModule mod_rewrite.c>
+    SetEnv HTTP_MOD_REWRITE On
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+#	RewriteBase /
+	RewriteRule ^(.*)$ index.php?_route=$1?%{QUERY_STRING} [PT,L]
+</IfModule>
